@@ -1,0 +1,180 @@
+.attribution { font-size: 11px; text-align: center; padding-bottom: 4px; color: white;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        list-style-type: none;
+
+    }
+    .general{
+         background-color: rgb(4, 1, 17) ;
+        
+    }
+    .bgdark{
+        background-image:url("../images/bg-mobile-dark.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bglight{
+        background-image:url("../images/bg-mobile-light.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    img{
+        width: 80%;
+        
+    }
+    .bgwidth{
+        width: 85%;
+        margin: auto;
+        padding: 50px 0px 60px 0px;
+         max-width: 600px;
+        
+    }
+   .img2 {
+        display: none;
+        
+    }
+    .hide {
+        display: none;
+        
+    }
+    
+    .show {
+        display:block;
+        
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+           
+    }
+     .span{
+        width: 30px;
+        height: 30px;
+        border: 1px solid grey;
+        border-radius: 50%;
+        
+    }
+    header h1{
+        font-size: 30px;
+        letter-spacing: 7px;
+        color: white;
+       margin-bottom: 30px;
+        
+    }
+    .form {
+        background-color: hsl(235, 24%, 19%);
+        padding: 20px ;
+        display: flex;
+       justify-content: space-between;
+        border-radius: 8px;
+       
+    }
+    .submit {
+        background-color: hsl(235, 24%, 19%);
+        padding: 10px;
+        display: flex;
+       justify-content: space-between;
+        border-radius: 8px;
+        color: grey;
+       
+    }
+    .form .put{
+       border-top-style: hidden;
+       border-bottom-style: hidden;
+       border-left-style: hidden;
+       border-right-style: hidden;
+       background-color:hsl(235, 24%, 19%) ;
+       color: grey;
+       
+    }
+    .form .put:focus{
+        border-top-style: hidden;
+       border-bottom-style: hidden;
+       border-left-style: hidden;
+       border-right-style: hidden;
+       background-color:hsl(235, 24%, 19%) ;
+       outline: none;
+       
+    }
+    .form .put:active{
+        border-top-style: hidden;
+       border-bottom-style: hidden;
+       border-left-style: hidden;
+       border-right-style: hidden;
+       background-color:hsl(235, 24%, 19%) ;
+       
+    }
+    
+    .bggcolor{
+       background-color: rgb(4, 1, 17) ;
+        color: hsl(234, 39%, 85%);
+        height: 80vh;
+        
+        
+    }
+    .bggwidth{
+        background-color: hsl(235, 24%, 19%) ;
+        width: 85%;
+        margin: auto;
+        border-radius: 8px;
+        position: relative;
+        top: -40px;
+        max-width: 600px;
+        margin: auto;
+        
+        
+    }
+    .list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid hsl(236, 33%, 92%);
+        padding: 20px ;
+        
+        
+    }
+    .listchild{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        
+    }
+    .completed{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        color: hsl(240, 2%, 67%);
+        
+        
+    }
+    .all{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 30px 20px 30px;
+        color: hsl(240, 2%, 67%);
+         background-color: hsl(235, 24%, 19%);
+        width: 70%;
+        margin: auto;
+        border-radius: 8px;
+        max-width: 600px;
+        
+
+        
+        
+    }
+    .alone{
+        text-align: center;
+        color: hsl(240, 2%, 67%);
+        margin: 25px;
+        
+        
+    }
+    .good{
+        background-color: grey;
+    }
+    
