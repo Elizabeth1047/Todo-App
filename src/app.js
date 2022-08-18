@@ -1,5 +1,7 @@
+ 
 let moon=document.getElementById("moon");
 let sun = document.getElementById("sun");
+let toggleimage = document.getElementById("toggleimage");
 let background = document.getElementById("bgdark");
 let button = document.getElementById("submit");
 let input = document.getElementById("input");
@@ -11,71 +13,42 @@ let changebgg = document.getElementById("bggwidth");
 let completed = document.getElementById("completed");
 let all = document.getElementById("all");
 let general = document.getElementById("general");
+let delet = document.getElementById("delete");
+
+let paragraph = document.getElementById("p");
 
 
 
 
-
-moon.addEventListener("click", () => {
+toggleimage.addEventListener("click", () => {
   background.classList.toggle("bglight");
-  moon.style.display = "none";
-  sun.style.display = "block";
-  form.style.backgroundColor = "white";
-   changebg.style.backgroundColor = "hsl(234, 39%, 85%)";
-  changebgg.style.backgroundColor = "white";
- all.style.backgroundColor = "white";
- all.style.color = "black";
-  input.style.backgroundColor = "white";
-  input.style.color = "black";
-  button.style.backgroundColor = "white";
-  changebgg.style.color = "black";
-   completed.style.color = "black";
-
-  
-  
+  moon.classList.toggle("hide");
+  sun.classList.toggle("show");
+  button.classList.toggle("submit2");
+  input.classList.toggle("put2");
+  form.classList.toggle("form2");
+  general.classList.toggle("general2");
+  changebgg.classList.toggle("bggwidth2");
+  completed.classList.toggle("completed2");
+  all.classList.toggle("all2");
+ 
 });
-
-sun.addEventListener("click", () => {
-   background.classList.toggle("bglight");
-  sun.style.display = "none";
-  moon.style.display = "block";
-  form.style.backgroundColor = "hsl(235, 24%, 19%)";
-   changebg.style.backgroundColor = "rgb(4, 1, 17";
-  changebgg.style.backgroundColor = "hsl(235, 24%, 19%)";
-  all.style.backgroundColor = "hsl(235, 24%, 19%)";
-  all.style.color = "hsl(240, 2%, 67%)";
-  input.style.backgroundColor = "hsl(235, 24%, 19%)";
-  
-  button.style.backgroundColor = "hsl(235, 24%, 19%)";
-  changebgg.style.color = "hsl(234, 39%, 85%)";
-  completed.style.color = "hsl(240, 2%, 67%)";
-
-});
-
-
 
 form.addEventListener("submit", (e) => {
    e.preventDefault();
    let newlist = document.createElement("li");
    newlist.className = "list";
-   let first = document.createElement("div");
-   first.className = "listchild";
-   let one = document.createElement("div");
-   one.className = "span";
-   let two = document.createElement("label");
-   two.textContent = input.value;
-    let three = document.createElement("div");
-    three.className = "img3";
-    let x = document.createElement("img");
-    x.src = "images/icon-cross.svg";
-    x.className = "delete";
-    first.appendChild(one)
-    first.appendChild(two);
-    three.appendChild(x)
-    newlist.appendChild(first);
-    newlist.appendChild(three);
+   newlist.innerHTML = `
+              <div class="listchild">
+                  <div class="span"></div>
+                  <label>${input.value}</label>
+              </div>
+              <div class="img3">
+                <img src="images/icon-cross.svg" class="delete">
+              </div>
+          </li> `;
     underlist.appendChild(newlist);
-    
+    input.value="";
 });
 
 underlist.addEventListener("click", (e) => {
@@ -84,24 +57,63 @@ if( e.target.classList.contains("delete")){
   underlist.removeChild(remove);
 }
  });
+ 
+
+underlist.addEventListener("click", (e) => {
+   if (e.target.classList.contains("span")) {
+     e.target.classList.toggle("good");
+     e.target.parentElement.parentElement.classList.add("goo");
+     let imgss = document.createElement("img");
+     imgss.src = "images/icon-check.svg";
+     e.target.appendChild(imgss);
+   }
+   paragraph.addEventListener("click", () => {
+     for (const lis of underlist.children) {
+       if (lis.classList.contains("goo")) {
+         underlist.removeChild(lis);
+       }
+     }
+   });
+ 
+});
+
+
+
+  
+
+ /*underlist.addEventListener("click", (e) => {
+   if (e.target.classList.contains("span")) {
+     e.target.classList.toggle("good");
+    let imgss = document.createElement("img");
+     imgss.src = "images/icon-check.svg";
+     e.target.appendChild(imgss);
+     console.log(e.target);
+   }
+ });
+
+delet.addEventListener("click", (e) => {
+  let chil=delet.parentElement.parentElement;
+   underlist.removeChild(chil);
+    
+});
+
+ 
 
  underlist.addEventListener("click", (e) => {
    if ( e.target.classList.contains("span")) {
      e.target.classList.toggle("good");
-   let imgss=document.createElement("img")
-   imgss.src = "images/icon-check.svg";
-   imgss.style.textAlign="center"
-   e.target.appendChild(imgss)
-   console.log(e.target)
+     
+    let imgss=document.createElement("img")
+    imgss.src = "images/icon-check.svg";
+    e.target.appendChild(imgss);
+    console.log(e.target);
    }
  });
  changebgg.addEventListener("click", (e) => {
-   if (e.target.classList.contains("p")) {
-    
-    
-    
-   }
- });
+   
+    console.log("lists");
+ });*/
+ 
 
  
  
