@@ -170,5 +170,5 @@ header h1 {
   align-items: center;
 }
 .goo {
-  
+  filter: blur();
 }
