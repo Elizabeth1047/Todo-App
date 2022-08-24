@@ -64,12 +64,12 @@ underlist.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     let remove = e.target.parentElement.parentElement;
     underlist.removeChild(remove);
-  }
+  } 
   counts();
   // to add a checkmark to my checkbox
   if (e.target.classList.contains("span")) {
     e.target.classList.toggle("good");
-    e.target.parentElement.parentElement.classList.add("goo");
+    e.target.parentElement.parentElement.classList.toggle("goo");
     // let imgss = document.createElement("img");
     // imgss.src = "images/icon-check.svg";
     // e.target.appendChild(imgss);
@@ -91,42 +91,13 @@ underlist.addEventListener("click", (e) => {
       counts();
     }
   });
-});
 
-myprompt();
+ });
+ 
+ myprompt();
 
 // to show the number of list items left after adding,deleting and removing
 let counts = () => {
   count.innerText = underlist.children.length;
 };
 
-// const loop = () => {
-//   arr.forEach((ar) => {
-//     underlist.appendChild(ar);
-//   });
-// };
-
-// underlist.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("delete")) {
-//     let list = e.target.parentElement.parentElement;
-//     underlist.removeChild(list);
-//   }
-//   if (e.target.classList.contains("span")) {
-//     console.log(e.target);
-//     e.target.classList.toggle("good");
-//     e.target.parentElement.parentElement.classList.add("goo");
-//     //  underlist.firstChild.classList.toggle("spa2");
-//     loop();
-//   }
-//   counts();
-
-//   paragraph.addEventListener("click", () => {
-//     loop(){
-//     if (arr.classList.contains("goo")) {
-//       underlist.removeChild(ar);
-
-//       counts();
-//     }
-//     }
-//   });
-// });
